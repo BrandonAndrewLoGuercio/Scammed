@@ -12,6 +12,7 @@
         <small>(<%= URI.parse(item.url).host %>)</small>
       <% else %>
         <%= link_to item.title, item, title: truncate(item.content, length: 30) %>
+        <small><%= item.content %></small>
         <small><%= link_to '[discussion]', item %></small>
       <% end %>
     </h4>

@@ -1,6 +1,8 @@
 # Updating routes? Please update the readme as well.
 
 Rails.application.routes.draw do
+  get 'ang_pages/index'
+
   resources :items, except: [:destroy] do
     resources :item_comments
     member do
