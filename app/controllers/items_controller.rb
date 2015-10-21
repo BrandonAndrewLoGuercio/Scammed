@@ -24,7 +24,14 @@ class ItemsController < ApplicationController
   end
 
   def create
-    @item = current_user.items.build(item_params)
+    if current_user 
+      puts 'we have a user'
+      @item = current_user.items.build(item_params)      
+    else
+      puts 'no user'
+      @user = User.new({"username"=>"anon", "password"=>"password", "password_confirmation"=>"password", "about"=>"about me"})
+      @user.save
+    end
 
     if @item.save
       redirect_to @item, notice: 'Item was successfully created.'
