@@ -16,4 +16,5 @@
 //= require bootstrap
 //= require bootstrap-material-design
 //= require vendor/bootstrap_material_design_config
+//= require angular/angular.min
 //= require main

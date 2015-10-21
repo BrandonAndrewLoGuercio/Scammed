@@ -8,11 +8,11 @@
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
-      <%= link_to site_title_text, root_path, class: 'navbar-brand' %>
+      <%= link_to "{{title}}", root_path, class: 'navbar-brand' %>
     </div>
     <div class="navbar-collapse collapse navbar-right">
       <ul class="nav navbar-nav">
-        <%= link_to_list_item("TOP", items_path) %>
+        <%= link_to_list_item("{{item}}", items_path) %>
         <%= link_to_list_item("NEW", items_path(newest: true)) %>
         <% if current_user %>
           <%= link_to_list_item 'SUBMIT', new_item_path %>
